@@ -66,6 +66,25 @@ remote_theme: StartBootstrap/startbootstrap-clean-blog-jekyll
 
 그 다음 커밋하고 푸시하면 `(username).github.io`에 블로그가 보이는 것을 확인할 수 있습니다.
 
+## Posts 설정
+
+이 테마는 Posts 페이지에 페이지 기능을 사용하기 때문에 추가 설정이 필요합니다.
+
+`_config.yml`을 열고 
+
+```
+plugins:
+  - jekyll-feed
+```
+가 있는 줄 바로 아래에 아래 내용을 넣습니다.
+
+```
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/posts/page_:num"
+```
+
 ## 라이선스
 
 이 블로그의 내용은 별도로 고지되지 않는 한 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.ko">CC BY-NC-SA</a> 라이선스가 적용됩니다.
